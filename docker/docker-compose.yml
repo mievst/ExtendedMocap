@@ -1,0 +1,9 @@
+services:
+  infer:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.infer
+    ports:
+      - "7860:7860"
+    environment:
+      GRADIO_SERVER_PORT: "7860"

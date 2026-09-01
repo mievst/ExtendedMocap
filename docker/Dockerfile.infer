@@ -1,0 +1,29 @@
+# Lightweight CPU image for the Gradio demo.
+# Builds the package with uv and serves the web app.
+# MediaPipe .task models are auto-downloaded at first run (see extractor.py);
+# trained checkpoints are optional and can be mounted or baked in at build time.
+FROM python:3.11-slim
+
+ENV PIP_NO_CACHE_DIR=1 \
+    UV_NO_CACHE=1 \
+    PYTHONUNBUFFERED=1
+
+# Install uv for dependency resolution.
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
+WORKDIR /app
+
+# Install dependencies first (better layer caching).
+COPY pyproject.toml uv.lock* ./
+RUN uv sync --extra app --no-dev
+
+# Copy the package and app code.
+COPY src/ ./src/
+COPY app/ ./app/
+COPY configs/ ./configs/
+
+EXPOSE 7860
+
+ENV GRADIO_SERVER_PORT=7860
+
+CMD ["uv", "run", "--no-dev", "python", "app/gradio_app.py"]

@@ -1,0 +1,156 @@
+{
+    "rokoko_custom_names": true,
+    "version": 1,
+    "bones": {
+        "hip": [
+            "cc_base_hip"
+        ],
+        "custom_bone_mixamorig:spine": [
+            "mixamorig:spine",
+            "cc_base_spine01"
+        ],
+        "custom_bone_mixamorig:spine1": [
+            "mixamorig:spine1",
+            "cc_base_spine02"
+        ],
+        "neck": [
+            "cc_base_necktwist01"
+        ],
+        "head": [
+            "cc_base_necktwist02"
+        ],
+        "leftShoulder": [
+            "cc_base_l_clavicle"
+        ],
+        "leftUpperArm": [
+            "cc_base_l_upperarm"
+        ],
+        "leftLowerArm": [
+            "cc_base_l_forearm"
+        ],
+        "leftHand": [
+            "cc_base_l_hand"
+        ],
+        "leftMiddleProximal": [
+            "cc_base_l_mid1"
+        ],
+        "leftMiddleMedial": [
+            "cc_base_l_mid2"
+        ],
+        "leftMiddleDistal": [
+            "cc_base_l_mid3"
+        ],
+        "leftThumbProximal": [
+            "cc_base_l_thumb2"
+        ],
+        "leftThumbMedial": [
+            "cc_base_l_thumb3"
+        ],
+        "leftIndexProximal": [
+            "cc_base_l_index1"
+        ],
+        "leftIndexMedial": [
+            "cc_base_l_index2"
+        ],
+        "leftIndexDistal": [
+            "cc_base_l_index3"
+        ],
+        "leftRingProximal": [
+            "cc_base_l_ring1"
+        ],
+        "leftRingMedial": [
+            "cc_base_l_ring2"
+        ],
+        "leftRingDistal": [
+            "cc_base_l_ring3"
+        ],
+        "leftLittleProximal": [
+            "cc_base_l_pinky1"
+        ],
+        "leftLittleMedial": [
+            "cc_base_l_pinky2"
+        ],
+        "leftLittleDistal": [
+            "cc_base_l_pinky3"
+        ],
+        "rightShoulder": [
+            "cc_base_r_clavicle"
+        ],
+        "rightUpperArm": [
+            "cc_base_r_upperarm"
+        ],
+        "rightLowerArm": [
+            "cc_base_r_forearm"
+        ],
+        "rightHand": [
+            "cc_base_r_hand"
+        ],
+        "rightMiddleProximal": [
+            "cc_base_r_mid1"
+        ],
+        "rightMiddleMedial": [
+            "cc_base_r_mid2"
+        ],
+        "rightMiddleDistal": [
+            "cc_base_r_mid3"
+        ],
+        "rightThumbProximal": [
+            "cc_base_r_thumb2"
+        ],
+        "rightThumbMedial": [
+            "cc_base_r_thumb3"
+        ],
+        "rightIndexProximal": [
+            "cc_base_r_index1"
+        ],
+        "rightIndexMedial": [
+            "cc_base_r_index2"
+        ],
+        "rightIndexDistal": [
+            "cc_base_r_index3"
+        ],
+        "rightRingProximal": [
+            "cc_base_r_ring1"
+        ],
+        "rightRingMedial": [
+            "cc_base_r_ring2"
+        ],
+        "rightRingDistal": [
+            "cc_base_r_ring3"
+        ],
+        "rightLittleProximal": [
+            "cc_base_r_pinky1"
+        ],
+        "rightLittleMedial": [
+            "cc_base_r_pinky2"
+        ],
+        "rightLittleDistal": [
+            "cc_base_r_pinky3"
+        ],
+        "leftUpLeg": [
+            "cc_base_l_thigh"
+        ],
+        "leftLeg": [
+            "cc_base_l_calf"
+        ],
+        "leftFoot": [
+            "cc_base_l_foot"
+        ],
+        "leftToe": [
+            "cc_base_l_toebase"
+        ],
+        "rightUpLeg": [
+            "cc_base_r_thigh"
+        ],
+        "rightLeg": [
+            "cc_base_r_calf"
+        ],
+        "rightFoot": [
+            "cc_base_r_foot"
+        ],
+        "rightToe": [
+            "cc_base_r_toebase"
+        ]
+    },
+    "shapes": {}
+}

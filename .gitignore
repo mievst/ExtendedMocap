@@ -1,0 +1,49 @@
+# Videos
+*.mp4
+*.MP4
+*.avi
+*.mov
+*.mkv
+
+# Blender backups
+*.blend1
+*.blend2
+# Blend scenes (large working files, not for distribution)
+*.blend
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+
+# Editable notebooks with huge embedded outputs
+.ipynb_checkpoints/
+
+# Oversized legacy notebooks (code migrated into src/extended_mocap)
+notebooks/mediapipe2quatDL.ipynb
+notebooks/mp2quat.ipynb
+
+# Model checkpoints (trained locally, published via HuggingFace).
+# MediaPipe .task models are auto-downloaded on first use (see extractor.py).
+models/
+*.task
+*.onnx
+
+# Large datasets (kept locally, published via HuggingFace Datasets)
+data/mocap/csv/
+data/mediapipe/csv/
+data/mocap/csv_v/
+data/mediapipe/csv_v/
+data/cache/
+
+# Derived data-pipeline artifacts (regenerate from .blend)
+data/renders/
+data/blend_manifest.json
+data/motion_manifest.json
+
+# Misc
+.DS_Store
+Thumbs.db

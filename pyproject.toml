@@ -1,0 +1,65 @@
+[project]
+name = "extended-mocap"
+version = "0.1.0"
+description = "Video-to-3D skeleton animation pipeline using MediaPipe + ML + Blender"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "ExtendedMocap contributors" }]
+keywords = ["mocap", "motion-capture", "mediapipe", "blender", "animation", "deep-learning"]
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "opencv-contrib-python>=4.9",
+    "mediapipe>=0.10,<0.11",
+    "torch==2.13.0+cu132",
+    "scipy>=1.11",
+    "scikit-learn>=1.2",
+    "tqdm>=4.65",
+    "jupyter>=1.1.1",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu132" }
+
+[project.optional-dependencies]
+app = [
+    "gradio>=4.0",
+    "plotly>=5.18",
+]
+hf = [
+    "datasets>=2.14",
+    "huggingface_hub>=0.20",
+]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.3",
+]
+
+[project.scripts]
+extended-mocap = "extended_mocap.cli:main"
+
+[[tool.uv.index]]
+name = "pytorch-cu132"
+url = "https://download.pytorch.org/whl/cu132"
+explicit = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/extended_mocap"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint.per-file-ignores]
+# Plotly idiom: dict() arguments are conventional in this codebase.
+"app/visualization.py" = ["C408"]
+# Legacy Blender scripts (bpy) — kept as-is, only formatting/logger nits.
+"src/extended_mocap/blender/extract.py" = ["LOG", "C405", "C408"]
+"src/extended_mocap/blender/render.py" = ["LOG"]
+"src/extended_mocap/blender/rokoko_retarget.py" = ["F841", "PERF402", "RUF059", "F401"]
+"scripts/sum_frames.py" = ["RUF059"]
